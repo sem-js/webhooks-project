@@ -1,4 +1,4 @@
-# study-group-hookup
+# hookup
 SEMjs study group project with CI, webhooks and IoT.
 
 Notes:
@@ -17,13 +17,13 @@ components:
 questions:
 - Where to host?
 - Who will do merge requests?
-   MiguelCastillo
+   miguelcastillo
    daniellecloss
 - Who wants to be involved?
-   HeyMark
-   Matthewmorgan
-   Mgmatola
-   Daniellecloss
+   heymark
+   matthewmorgan
+   mgmatola
+   daniellecloss
 - What technology would we want to use?
 - where to get the hardware and what hardware to get?
    briangenisio
