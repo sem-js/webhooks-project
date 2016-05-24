@@ -3,6 +3,7 @@ SEMjs study group project with CI, webhooks and IoT.
 
 Notes:
 - Basic scaffolding for a web system.
+- Repo/project name is negotiable!
 
 Objectives:
 - Let people collaborate on a project that has all the basic components of a production web application
