@@ -2,7 +2,7 @@
 SEMjs study group project with CI, webhooks and IoT.
 
 Notes:
-Basic scaffolding for a web system.
+- Basic scaffolding for a web system.
 
 Objectives:
 - Let people collaborate on a project that has all the basic components of a production web application
@@ -17,16 +17,16 @@ components:
 questions:
 - Where to host?
 - Who will do merge requests?
-   miguelcastillo
-   daniellecloss
+   - miguelcastillo
+   - daniellecloss
 - Who wants to be involved?
-   heymark
-   matthewmorgan
-   mgmatola
-   daniellecloss
+   - heymark
+   - matthewmorgan
+   - mgmatola
+   - daniellecloss
 - What technology would we want to use?
 - where to get the hardware and what hardware to get?
-   briangenisio
+   - briangenisio
 
 process?
 - code review
