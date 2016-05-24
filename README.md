@@ -1,5 +1,3 @@
-[![Gitter](https://badges.gitter.im/sem-js/hookup.svg)](https://gitter.im/sem-js/hookup?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 # hookup
 
 [![Join the chat at https://gitter.im/sem-js/hookup](https://badges.gitter.im/sem-js/hookup.svg)](https://gitter.im/sem-js/hookup?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
