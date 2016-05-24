@@ -1,3 +1,5 @@
+[![Gitter](https://badges.gitter.im/sem-js/hookup.svg)](https://gitter.im/sem-js/hookup?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 # hookup
 SEMjs study group project with CI, webhooks and IoT.
 
