@@ -34,3 +34,8 @@ questions:
 process?
 - code review
 - pull requests
+
+proof of concept
+- [Heroku Server Code](./heroku-server-example.js)
+- [Example Client Code](./node-client-example.js)
+- Webhook connects to https://young-fjord-53100.herokuapp.com/ece926d8c0356205276a45266d361161 and client receives event
