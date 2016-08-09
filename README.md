@@ -39,10 +39,8 @@ Simple UI will have:
 
 Questions [have we answered any of these?]:
 - Where to host?
-- Who will do merge requests?
+- Current Contributors:
    - miguelcastillo
-   - daniellecloss [I am currently admin on the repo, due to starting the readme/notes, but it might be better to have someone more experienced handle the merge requests]
-- Who wants to be involved?
    - heymark
    - matthewmorgan
    - mgmatola
