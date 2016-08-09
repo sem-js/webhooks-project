@@ -7,10 +7,10 @@ Project Objectives:
 - Let people collaborate on a project that has all the basic components of a production web application
 - Build a working web application
 - learn github authentication
-- learn how CI (continuation integration) works
+- learn how CI (continuous integration) works
 - learn how to make a PR (pull request)
-- run unit tests
-- practive a code review process
+- learn to write and run unit tests
+- practice a code review process
 
 Requirements:
 - This will be a basic scaffolding for a web system
