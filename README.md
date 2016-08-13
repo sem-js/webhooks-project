@@ -28,7 +28,8 @@ questions:
    - mgmatola
    - daniellecloss
    - ravenwilde (twitter: @ravenwilde)
-- What technology would we want to use?
+   - Asya Lushnikova
+- What technology would we want to use? 
 - where to get the hardware and what hardware to get?
    - briangenisio
 
