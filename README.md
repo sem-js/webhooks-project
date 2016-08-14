@@ -28,7 +28,7 @@ questions:
    - mgmatola
    - daniellecloss
    - ravenwilde (twitter: @ravenwilde)
-   - Asya Lushnikova
+   - ![remy_ico](https://cloud.githubusercontent.com/assets/16939008/17646598/049ffe38-619f-11e6-9e20-c8905d8daffc.jpg) [asyalushnikova](https://github.com/asyalushnikova)
 - What technology would we want to use? 
 - where to get the hardware and what hardware to get?
    - briangenisio
