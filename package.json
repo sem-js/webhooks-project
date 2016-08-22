@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "sem-js Webhooks project",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sem-js/webhooks-project.git"
@@ -14,5 +13,8 @@
   "bugs": {
     "url": "https://github.com/sem-js/webhooks-project/issues"
   },
-  "homepage": "https://github.com/sem-js/webhooks-project#readme"
+  "homepage": "https://github.com/sem-js/webhooks-project#readme",
+  "devDependencies": {
+    "eslint": "^3.3.1"
+  }
 }
