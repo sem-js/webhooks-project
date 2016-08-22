@@ -1,0 +1,18 @@
+{
+  "name": "webhooks-project",
+  "version": "1.0.0",
+  "description": "sem-js Webhooks project",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sem-js/webhooks-project.git"
+  },
+  "author": "Miguel Castillo <manchagnu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sem-js/webhooks-project/issues"
+  },
+  "homepage": "https://github.com/sem-js/webhooks-project#readme"
+}
