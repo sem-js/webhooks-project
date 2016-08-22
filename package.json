@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "sem-js Webhooks project",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "eslint *.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sem-js/webhooks-project.git"
