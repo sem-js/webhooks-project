@@ -1,6 +1,9 @@
 {
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+            "jsx": true
+        }
   },
   "env": {
     "browser": true,
@@ -24,4 +27,3 @@
     "eol-last": 2
   }
 }
-
