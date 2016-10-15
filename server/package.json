@@ -1,0 +1,28 @@
+{
+  "name": "webhooks-project-server",
+  "version": "1.0.0",
+  "description": "sem-js Webhooks project server",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sem-js/webhooks-project.git"
+  },
+  "author": "Brian Genisio <briangenisio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sem-js/webhooks-project/issues"
+  },
+  "homepage": "https://github.com/sem-js/webhooks-project#readme",
+  "devDependencies": {
+    "eslint": "^3.3.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.4",
+    "graphql": "^0.7.2",
+    "node-uuid": "^1.4.7"
+  }
+}
