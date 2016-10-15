@@ -4,6 +4,7 @@
   "description": "sem-js Webhooks project",
   "main": "index.js",
   "scripts": {
+    "start": "nf start -p 3000",
     "test": "eslint *.js, ./webhooks-app/src/*.js"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/sem-js/webhooks-project#readme",
   "devDependencies": {
-    "eslint": "^3.3.1"
+    "eslint": "^3.3.1",
+    "foreman": "^2.0.0"
   }
 }

@@ -4,7 +4,7 @@
   "description": "sem-js Webhooks project server",
   "main": "index.js",
   "scripts": {
-    "start": ""
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
