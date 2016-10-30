@@ -5,7 +5,7 @@ import HookView from "./hook-view";
 class HookListView extends Component {
     render() {
         return <div>
-        {this.props.hookList.hooks.map(hook => {
+        {this.props.hooks.map(hook => {
             console.log(hook);
             return <HookView hook={hook} key={hook.id} />
         }
