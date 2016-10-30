@@ -25,11 +25,31 @@ const createHook = action(name => {
     }`;
 
     dataClient.mutate(mutation, {name}).then(response => {
-        appState.hooks.push(observable(response.newHook));
+        action(() => {
+            appState.hooks.push(observable(response.newHook));
+        })();
+    });
+});
+
+const deleteHook = action(id => {
+    const mutation = `($id: String) {
+        success: deleteHookHandler(id: $id)
+    }`;
+
+    dataClient.mutate(mutation, {id}).then(response => {
+        action(() => {
+            if(response.success) {
+                const mutationToRemove = appState.hooks.find(hook => hook.id === id);
+                if(mutationToRemove) {
+                    appState.hooks.remove(mutationToRemove);
+                }
+            }
+        })();
     });
 });
 
 export {
     fetchHooks,
-    createHook
+    createHook,
+    deleteHook
 };

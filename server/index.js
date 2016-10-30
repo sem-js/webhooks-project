@@ -17,13 +17,15 @@ const schema = buildSchema(`
 
   type Mutation {
     createHookHandler(name:String): HookHandler
+    deleteHookHandler(id:String): Boolean
   } 
 `);
 
 const root = { 
     hookHandlers: () => store.getWebhooks(),
 
-    createHookHandler: ({name}) => store.createWebhook(name)
+    createHookHandler: ({name}) => store.createWebhook(name),
+    deleteHookHandler: ({id}) => store.deleteWebhook(id)
  };
 
 var app = express();
