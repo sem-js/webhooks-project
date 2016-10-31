@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
+
 import {extendObservable} from "mobx";
 import {observer} from "mobx-react";
 import HookView from "./hook-view";
@@ -15,15 +18,12 @@ class HookListView extends Component {
 
     render() {
         return <div>
-        {this.props.hooks.map(hook => {
-            console.log(hook);
-            return <HookView hook={hook} key={hook.id} />
-        }
-        )}
             <div>
-                <input onChange={evt => this.newHookName = evt.target.value} />
-                <button onClick={() => createHook(this.newHookName)}>Create Test</button>
+                <TextField hintText="Hook Name" onChange={evt => this.newHookName = evt.target.value} />
+                <RaisedButton label="Create" onClick={() => createHook(this.newHookName)} primary={true} />
             </div>
+
+            {this.props.hooks.map(hook => <HookView hook={hook} key={hook.id} />)}
         </div>;
     }
 };
