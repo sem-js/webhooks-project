@@ -1,0 +1,8 @@
+{
+  "name": "Webhooks Project",
+  "description": "An example deployment of what the project might look like",
+  "repository": "https://github.com/sem-js/webhooks-project",
+  "logo": "https://raw.githubusercontent.com/sem-js/logo/master/semjs.svg",
+  "keywords": ["node", "express", "static", "webhooks"],
+  "image": "heroku/nodejs"
+}
