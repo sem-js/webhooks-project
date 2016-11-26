@@ -4,7 +4,7 @@
   "description": "sem-js Webhooks project",
   "main": "index.js",
   "scripts": {
-    "start": "nf start -p 3000",
+    "start": "cd server && node index.js",
     "test": "eslint *.js, ./webhooks-app/src/*.js"
   },
   "repository": {
