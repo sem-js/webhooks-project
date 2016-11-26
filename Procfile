@@ -1,2 +1,1 @@
-web: cd webhooks-app && npm start
-api: cd server && npm start
+web: cd server && node index.js
