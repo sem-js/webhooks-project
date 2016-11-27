@@ -8,7 +8,7 @@ class HookView extends Component {
     render() {
         const {hook} = this.props;
         return <Card>
-            <CardTitle title="Hook" subtitle={hook.name} />
+            <CardTitle title={hook.name} subtitle={hook.id} />
             <CardText>
                 Include the client-side code necessary for attaching to hook events
             </CardText>

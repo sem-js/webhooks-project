@@ -9,6 +9,10 @@ function getWebhooks() {
     return webhooks;
 }
 
+function getWebhook(id) {
+    return webhooks.find(hook => hook.id === id);
+}
+
 function createWebhook(name) {
     const newWebhook = {
         id: uuid.v1(),
@@ -40,6 +44,7 @@ function deleteWebhook(id) {
 
 module.exports = {
     getWebhooks,
+    getWebhook,
     createWebhook,
     deleteWebhook
 };
