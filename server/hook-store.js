@@ -1,44 +1,76 @@
 const uuid = require('node-uuid');
-const persist = require('./file-store.js');
+const mongodb = require('mongodb');
 
-let data = persist.get();
+const uri = process.env.MONGO_URI;
 
-let {webhooks = []} = data;
+function webhooksDb(callback) {
+    return new Promise((resolve, reject) => {
+        mongodb.MongoClient.connect(uri, (err, db) => {
+            if(err) reject(err);
+            resolve(db);
+        });
+    });
+}
+
+function findWebhooks(query) {
+    return webhooksDb()
+        .then(db => {
+            const collection = db.collection('webhooks');
+
+            return new Promise((resolve, reject) => {
+                collection.find(query).toArray((err, docs) => {
+                    if(err) return reject(err);
+
+                    resolve(docs);
+                    db.close();
+                })
+            });
+        });
+}
 
 function getWebhooks() {
-    return webhooks;
+    return findWebhooks({});
 }
 
 function getWebhook(id) {
-    return webhooks.find(hook => hook.id === id);
+    return findWebhooks({id});
 }
 
 function createWebhook(name) {
-    const newWebhook = {
-        id: uuid.v1(),
-        name
-    };
+    return webhooksDb()
+        .then(db => {
+            const collection = db.collection('webhooks');
 
-    webhooks = [...webhooks, newWebhook];
+            const newWebhook = {
+                id: uuid.v1(),
+                name
+            };
 
-    persist.store(Object.assign({}, data, {webhooks}));
+            return new Promise((resolve, reject) => {
+                collection.insert(newWebhook, (err, result) => {
+                    if(err) return reject(err);
 
-    return newWebhook;
+                    resolve(newWebhook);
+                    db.close();
+                });
+            })
+        });
 }
 
 function deleteWebhook(id) {
-    const index = webhooks.findIndex(hook => hook.id === id);
+    return webhooksDb()
+        .then(db => {
+            const collection = db.collection('webhooks');
 
-    if(index < 0) return false;
+            return new Promise((resolve, reject) => {
+                collection.deleteOne({id}, (err, result) => {
+                    if(err) return reject(err);
 
-    webhooks = [
-        ...webhooks.slice(0, index),
-        ...webhooks.slice(index + 1)
-    ];
-
-    persist.store(Object.assign({}, data, {webhooks}));
-
-    return true;
+                    resolve(true);
+                    db.close();
+                })
+            });
+        });
 }
 
 
