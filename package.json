@@ -25,7 +25,7 @@
     "express": "^4.14.0",
     "express-graphql": "^0.5.4",
     "graphql": "^0.7.2",
-    "mongodb": "^2.2.11",
+    "mongo-db": "^1.0.1",
     "node-uuid": "^1.4.7",
     "socket-io": "0.0.0",
     "socketio": "^1.0.0"

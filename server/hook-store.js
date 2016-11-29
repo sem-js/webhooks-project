@@ -1,78 +1,43 @@
 const uuid = require('node-uuid');
-const mongodb = require('mongodb');
+const mongodb = require('mongo-db').default;
+ 
+const cfg = {
+  database: 'database',
+  collection: 'database',
+  user: 'database',
+  password: 'database',
+  host: 'mongo.local',
+  port: 27017,
+};
 
 const uri = process.env.MONGO_URI;
-
-function webhooksDb(callback) {
-    return new Promise((resolve, reject) => {
-        mongodb.MongoClient.connect(uri, (err, db) => {
-            if(err) reject(err);
-            resolve(db);
-        });
-    });
-}
-
-function findWebhooks(query) {
-    return webhooksDb()
-        .then(db => {
-            const collection = db.collection('webhooks');
-
-            return new Promise((resolve, reject) => {
-                collection.find(query).toArray((err, docs) => {
-                    if(err) return reject(err);
-
-                    resolve(docs);
-                    db.close();
-                })
-            });
-        });
-}
+const db  = new mongodb(uri, 'webhooks', true);
 
 function getWebhooks() {
-    return findWebhooks({});
+    return db.find();
 }
 
 function getWebhook(id) {
-    return findWebhooks({id});
+    return db.find({id})
+        .then(hooks => {
+            if(hooks.length <= 0) return Promise.reject('Webhook Not found');
+
+            return hooks[0];
+        });
 }
 
 function createWebhook(name) {
-    return webhooksDb()
-        .then(db => {
-            const collection = db.collection('webhooks');
+    const newWebhook = {
+        id: uuid.v1(),
+        name
+    };
 
-            const newWebhook = {
-                id: uuid.v1(),
-                name
-            };
-
-            return new Promise((resolve, reject) => {
-                collection.insert(newWebhook, (err, result) => {
-                    if(err) return reject(err);
-
-                    resolve(newWebhook);
-                    db.close();
-                });
-            })
-        });
+    return db.insert(newWebhook).then(() => newWebhook);
 }
 
 function deleteWebhook(id) {
-    return webhooksDb()
-        .then(db => {
-            const collection = db.collection('webhooks');
-
-            return new Promise((resolve, reject) => {
-                collection.deleteOne({id}, (err, result) => {
-                    if(err) return reject(err);
-
-                    resolve(true);
-                    db.close();
-                })
-            });
-        });
+    return db.remove({id});
 }
-
 
 module.exports = {
     getWebhooks,
