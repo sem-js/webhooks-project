@@ -3,6 +3,8 @@
 [![Join the chat at https://gitter.im/sem-js/hookup](https://badges.gitter.im/sem-js/hookup.svg)](https://gitter.im/sem-js/hookup?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 SEMjs study group project with CI, webhooks and IoT.
 
+(see bottom of the file for current install instructions)
+
 Project Objectives:
 - Let people collaborate on a project that has all the basic components of a production web application
 - Build a working web application
@@ -55,3 +57,13 @@ proof of concept
 - [Heroku Server Code](./heroku-server-example.js)
 - [Example Client Code](./node-client-example.js)
 - Webhook connects to https://young-fjord-53100.herokuapp.com/ece926d8c0356205276a45266d361161 and client receives event
+
+------------------
+Current install instructions for base client app:
+- clone repo
+- make sure you are in the base repo directory
+- type `npm install`
+- cd to the webhooks-app directory
+- type `npm start`
+
+This should get you to the basic create-react-app demo (currently, until we update it!)
