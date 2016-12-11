@@ -1,0 +1,33 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#app-header {
+  overflow: visible;
+  text-align: center;
+  padding: 0 5px;
+
+  border-bottom: 1px solid #cecece;
+  background: #eeeeee;
+}
+
+#app-body {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-flow: column nowrap;
+
+  padding: 0 15px;
+  font-size: 2em;
+}
+
+#app-footer {
+  overflow: hidden;
+  text-align: right;
+  padding: 0 5px;
+
+  border-top: 1px solid #cecece;
+  background: #eeeeee;
+}

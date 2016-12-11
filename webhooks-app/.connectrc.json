@@ -1,0 +1,21 @@
+{
+  "base": "dist",
+  "protocol": "http",
+  "port": 8045,
+  "hostname": "localhost",
+  "keepalive": true,
+  "open": "http://localhost:8045/index.html",
+
+  "fallback": {
+    "index": "/index.html"
+  },
+  "livereload": {
+    "port": 32247
+  },
+  "proxies": [
+    {
+    "source": "/api",
+    "target": "http://localhost:4000/api"
+    }
+  ]
+}

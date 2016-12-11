@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
-import {extendObservable} from "mobx";
-import {observer} from "mobx-react";
-import HookView from "./hook-view";
-import {createHook} from "../actions/hook-actions";
+import {extendObservable} from 'mobx';
+import {observer} from 'mobx-react';
+import HookView from './hook-view';
+import {createHook} from '../actions/hook-actions';
 
 class HookListView extends Component {
     constructor() {

@@ -1,11 +1,14 @@
-import React, { Component } from "react";
+import React from 'react'; 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import Divider from 'material-ui/Divider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import HookListView from './hooks/hook-list-view';
+import HookListView from './hook-list-view';
 
-class App extends Component {
+injectTapEventPlugin();
+
+class App extends React.Component {
   render() {
     return (
       <MuiThemeProvider>
